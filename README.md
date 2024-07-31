@@ -49,9 +49,9 @@ Bu basit web uygulaması, kullanıcı bilgilerini bir API'den alır ve kartlar �
  * اعمال استایل با تیلوند:
    از کلاس‌های تیلوند برای اعمال استایل‌های دلخواه بر روی عناصر HTML استفاده کنید. این کلاس‌ها را می‌توانید مستقیماً به عناصر ایجاد شده در کد جاوا اسکریپت اضافه کنید.
 ```javascript
-// انتخاب عنصر HTML برای قرار دادن داده‌ها
-const userList = document.getElementById('user-list');
 
+const userList = document.getElementById('user-list');
+// انتخاب عنصر HTML برای قرار دادن داده‌ها
 // درخواست به API
 fetch('[https://reqres.in/api/users](https://reqres.in/api/users)')
   .then(response => response.json())
