@@ -75,7 +75,7 @@ fetch('[https://reqres.in/api/users](https://reqres.in/api/users)')
       userList.appendChild(li);
     });
   });
-
+```
 توضیح کد
  * انتخاب عنصر: ابتدا عنصری با شناسه user-list را انتخاب می‌کنیم که قرار است داده‌ها در آن نمایش داده شوند.
  * درخواست به API: از fetch برای ارسال درخواست به API استفاده می‌کنیم و پاسخ را به JSON تبدیل می‌کنیم.
