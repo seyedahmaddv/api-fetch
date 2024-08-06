@@ -1,9 +1,22 @@
-  userCard.innerHTML = `
-       <div class="card user-card" data-id="${user.id}">
-           <img src="${user.avatar}" class="card-img-top" alt="${user.first_name} ${user.last_name}">
-           <div class="card-body">
-               <h5 class="card-title">${user.first_name} ${user.last_name}</h5>
-               <p class="card-text">${user.email}</p>
-           </div>
-       </div>
-   `;
+fetch('https://reqres.in/api/users')
+    .then(response => response.json())
+    .then(data => {
+        const users = data.data;
+
+        users.forEach(user => {
+            const userCard = document.createElement('div');
+            userCard.className = 'col-md-4 mb-4';
+
+            userCard.innerHTML = `
+                <div class="card user-card" data-id="${user.id}">
+                    <img src="${user.avatar}" class="card-img-top" alt="${user.first_name} ${user.last_name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${user.first_name} ${user.last_name}</h5>
+                        <p class="card-text">${user.email}</p>
+                    </div>
+                </div>
+            `;
+
+            userList.appendChild(userCard);
+        });
+    });
